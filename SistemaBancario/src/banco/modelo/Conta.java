@@ -24,9 +24,16 @@ public class Conta {
 	}
 
 	public String listarDados() {
+		String nome;
+		if(cliente instanceof PessoaFisica) {
+			nome = ((PessoaFisica)cliente).getNome(); 
+		}else {
+			nome = ((PessoaJuridica)cliente).getRazaoSocial();
+		}
+		
 		return "NÚMERO: " + numero + "\n"
-				+ "CLIENTE: " + cliente + "\n"
-				+ "SALDO: " + saldo + "\n";
+				+ "CORRENTISTA: " + nome + "\n"
+				+ "SALDO: " + saldo + DecimalFormat.getCurrencyInstance().format(saldo);
 	}
 
 	public String getSaldoFormatado() {

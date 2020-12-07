@@ -33,6 +33,7 @@ public class PessoaFisica extends Cliente {
 		this.nome = nome;
 	}
 
+	@Override
 	public String listarDados() {
 		return "NOME: " + nome + "\n" 
 				+ "CPF: " + cpf + "\n" 
