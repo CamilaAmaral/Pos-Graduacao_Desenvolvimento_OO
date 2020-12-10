@@ -60,7 +60,7 @@ public class Principal {
 		      String tipoConta = JOptionPane.showInputDialog(null, "Tipo de conta a ser criada: \n" + "C - Conta Corrente\nP - Conta Poupança");
 			 
 		      if(tipoConta.equals("P")) {
-		    	  conta = new ContaPoupanca(cliente,10,5);
+		    	  conta = new ContaPoupanca(cliente);
 		      }else {
 		    	  conta = new ContaCorrente(cliente);
 		      }
