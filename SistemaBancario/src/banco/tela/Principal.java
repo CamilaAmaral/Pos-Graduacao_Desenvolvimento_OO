@@ -22,12 +22,12 @@ public class Principal {
 		String opcaoPrincipal = "";
 		
 		do {
-			opcaoPrincipal = JOptionPane.showInputDialog(null,"Cadastro de Contas para a agência ")
+			opcaoPrincipal = JOptionPane.showInputDialog(null,"Cadastro de Contas para a agência "
 					+ agencia.getNumero() + " - " + agencia.getNome() + "\n"
 					+ "\n OPÇÕES: \n"
 					+ "1 - Incluir cliente e conta \n"
 					+ "2 - Listar contas cadastradas \n"
-					+ "3 - Sair do Sistema";
+					+ "3 - Sair do Sistema");
 			
 			if (opcaoPrincipal.equals("1")) {
 		
@@ -52,15 +52,15 @@ public class Principal {
 			      cliente.setCidade(JOptionPane.showInputDialog(null, "Cidade do Cliente: "));
 			      cliente.setEstado(JOptionPane.showInputDialog(null, "Estado do Cliente: "));
 			 
-			      JOptionPane.showInputDialog(null, "DADOS DO CLIENTE\n\n" +
+			      JOptionPane.showMessageDialog(null, "DADOS DO CLIENTE\n\n" +
 			         cliente.listarDados());
 			 
 		      Conta conta;
 		      
-		      String tipoConta = JOptionPane.showInputDialog(null, "Tipo de conta a ser criada: \n" + "C - Conta Corrente \n P - Conta Poupança" );
+		      String tipoConta = JOptionPane.showInputDialog(null, "Tipo de conta a ser criada: \n" + "C - Conta Corrente\nP - Conta Poupança");
 			 
 		      if(tipoConta.equals("P")) {
-		    	  conta = new ContaPoupanca(cliente, 10, 5);
+		    	  conta = new ContaPoupanca(cliente,10,5);
 		      }else {
 		    	  conta = new ContaCorrente(cliente);
 		      }
@@ -76,15 +76,15 @@ public class Principal {
 			         String mensagem = "SALDO EM CONTA: " + conta.getSaldoFormatado() + "\n\n" +
 			            "OPÇÕES: \n1 - Depositar valor\n2 - Sacar valor\n3 - Finalizar";
 		         try {
-			            opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor do depósito:"));
+			            opcao = Integer.parseInt(JOptionPane.showInputDialog(null, mensagem));
 			            switch (opcao) {
 			            case 1:
-		               ret = JOptionPane.showInputDialog(null, "Valor do depósito:");
+		               ret = JOptionPane.showInputDialog(null, "Valor do depósito: ");
 		               conta.depositar(Double.parseDouble(ret));
 		               JOptionPane.showInputDialog(null, "Depósito realizado!");
 		               break;
 		            case 2:
-	               ret = JOptionPane.showInputDialog(null, "Valor do saque:");
+	               ret = JOptionPane.showInputDialog(null, "Valor do saque: ");
 	               if (conta.sacar(Double.parseDouble(ret))) {
 	                  JOptionPane.showInputDialog(null, "Saque realizado!");
 		               } else {

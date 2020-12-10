@@ -33,7 +33,7 @@ public class Conta {
 		
 		return "NÚMERO: " + numero + "\n"
 				+ "CORRENTISTA: " + nome + "\n"
-				+ "SALDO: " + saldo + DecimalFormat.getCurrencyInstance().format(saldo);
+				+ "SALDO: " + DecimalFormat.getCurrencyInstance().format(saldo);
 	}
 
 	public String getSaldoFormatado() {
