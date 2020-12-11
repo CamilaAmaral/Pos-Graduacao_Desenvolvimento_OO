@@ -34,7 +34,7 @@ public class ContaCorrente extends Conta {
 			return false;
 		}
 	}
-//	verificar erro listarDados está voltando null
+
 	@Override
 	public String listarDados() {
 		String nome;

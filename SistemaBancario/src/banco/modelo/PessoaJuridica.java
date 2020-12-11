@@ -32,7 +32,7 @@ public class PessoaJuridica extends Cliente{
 	public void setRazaoSocial(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
 	}
-//	verificar erro listarDados está voltando null.
+
 	public String listarDados() {
 		return "RAZÃO SOCIAL: " + razaoSocial + "\n" 
 				+ "CNPJ: " + cnpj + "\n" 

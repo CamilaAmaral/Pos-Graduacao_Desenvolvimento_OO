@@ -69,7 +69,6 @@ public class Principal {
 
 				agencia.incluirConta(conta);
 
-//		      verificar erro listarDados está voltando null.
 				JOptionPane.showMessageDialog(null, "DADOS DA CONTA\n\n" + conta.listarDados());
 
 				int opcao = 0;
