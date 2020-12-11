@@ -10,7 +10,6 @@ public class Agencia {
 	private List<Conta> contas;
 	
 	public Agencia(int numero, String nome) {
-		super();
 		this.numero = numero;
 		this.nome = nome;
 		contas = new ArrayList<>();

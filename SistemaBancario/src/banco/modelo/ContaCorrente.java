@@ -34,7 +34,7 @@ public class ContaCorrente extends Conta {
 			return false;
 		}
 	}
-
+//	verificar erro listarDados está voltando null
 	@Override
 	public String listarDados() {
 		String nome;
@@ -50,7 +50,7 @@ public class ContaCorrente extends Conta {
 	
 	private void aplicarJuros() {
 		if (saldo < 0) {
-			saldo = saldo - (saldo * juros /100);
+			saldo = saldo - (saldo * juros / 100);
 		}
 	}
 

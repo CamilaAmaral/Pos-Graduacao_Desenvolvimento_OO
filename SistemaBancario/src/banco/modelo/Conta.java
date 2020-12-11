@@ -12,6 +12,9 @@ public class Conta {
 
 	public Conta(Cliente cliente) {
 		contador++;
+		numero = contador;
+		this.cliente = cliente;
+		saldo = 1500.0;
 	}
 
 	public Conta(int numero, Cliente cliente, Double saldo) {
